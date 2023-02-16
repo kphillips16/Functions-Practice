@@ -12,8 +12,11 @@
 */
 
 // Your code goes here
+function logMessage() {
+  console.log("Hello, World!");
+}
 
-
+logMessage();
 
 /**
  * =============================================================
@@ -26,7 +29,11 @@
 */
 
 // Your code goes here...
+function logMyMessage(str) {
+  console.log(str);
+}
 
+logMyMessage("I log my first message!");
 
 
 /**
@@ -39,8 +46,11 @@
 */
 
 // Your code goes here...
+function logMessageWithMyName(str) {
+  console.log(`My name is ${str}!`);
+}
 
-
+logMessageWithMyName("Joes");
 
 /**
  * ==============================================================
@@ -53,8 +63,11 @@
 */
 
 // Your code goes here...
+function logMyInfo(str, num) {
+  console.log(`My name is ${str}. I am ${num} years old!`);
+}
 
-
+logMyInfo("Joes", 5032);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"
@@ -62,7 +75,10 @@
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function
 
 
+
+
 // Do not delete or change the lines beneath
+
 const f = {
   logMessage: logMessage || undefined,
   logMyMessage: logMyMessage || undefined,

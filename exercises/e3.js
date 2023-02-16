@@ -14,8 +14,11 @@
  */
 
 // Your code goes here...
+function doesArrayIncludeItemsBetweenVals(arr, val1, val2) {
+   return arr.some((num) => num > val1 && num < val2);
+}
 
-
+console.log(doesArrayIncludeItemsBetweenVals([2, 4, 2], 3, 5));
 
 /**
  * ====================================================
@@ -24,22 +27,46 @@
  * Arrow Function name: getValueWithConditionTwo;
  * Variable name for the function expression: getValueWithConditionThree;
  * All three functions resolve the same task:
-    * The function takes two numbers as arguments
-    * If the numbers are both equal to 40, return the sum of them
-    * Else return the doubled sum of them
+ * The function takes two numbers as arguments
+ * If the numbers are both equal to 40, return the sum of them
+ * Else return the doubled sum of them
  * getValueWithConditionOne(40, 40) => 80;
  * getValueWithConditionOne(20, 30) => 100;
  */
 
+// Your code goes here...
+function getValueWithConditionOne(num1, num2) {
+   if (num1 === 40 && num2 === 40) {
+      return num1 + num2;
+   }
+   return (num1 + num2) * 2;
+}
 
+let getValueWithConditionTwo = (num1, num2) => {
+   if (num1 === 40 && num2 === 40) {
+      return num1 + num2;
+   }
+   return (num1 + num2) * 2;
+};
+
+let getValueWithConditionThree = function (num1, num2) {
+   if (num1 === 40 && num2 === 40) {
+      return num1 + num2;
+   }
+   return (num1 + num2) * 2;
+};
+
+console.log(getValueWithConditionOne(40, 40));
+console.log(getValueWithConditionTwo(40, 40));
+console.log(getValueWithConditionThree(40, 40));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function
 
-
 // Do not delete or change the lines beneath
+
 const f = {
   doesArrayIncludeItemsBetweenVals: doesArrayIncludeItemsBetweenVals || undefined,
   getValueWithConditionOne: getValueWithConditionOne || undefined,
