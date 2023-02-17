@@ -15,7 +15,12 @@
 
 // Your code goes here...
 function doesArrayIncludeItemsBetweenVals(arr, val1, val2) {
-   return arr.some((num) => num > val1 && num < val2);
+   for(let num of arr) {
+      if (num > val1 && num < val2) {
+         return true;
+      }
+   }
+   return false;
 }
 
 console.log(doesArrayIncludeItemsBetweenVals([2, 4, 2], 3, 5));
